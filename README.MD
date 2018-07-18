@@ -35,12 +35,14 @@ You don't need that much to get started. Just tell Simple Garage Door Opener whi
 
 ```
 "accessories": [{
-        "accessory": "ControlsGarageDoorOpener",
-        "name": "ControlsGarageDoorOpener",
-        "doorSwitchPin": 12,
-        "simulateTimeOpening": 15,
-        "simulateTimeOpen": 30,
-        "simulateTimeClosing": 15
+        "accessory" : "ControlsGarageDoorOpener",
+        "name" : "ControlsGarageDoorOpener",
+        "doorSwitchPin" : 7,
+        "simulateTimeOpening" : 22,
+        "doorSwitchPressTimeInMs" : 2000,
+        "doorSwitchValue" : 0,
+        "simulateTimeOpen" : 42,
+        "simulateTimeClosing" : 22
     }]
 ```
 
