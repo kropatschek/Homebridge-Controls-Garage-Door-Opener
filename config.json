@@ -8,8 +8,8 @@
     "description": "This is an example configuration file. You can use this as a template for creating your own configuration file.",
     "platforms": [],
     "accessories": [{
-        "accessory" : "ControlsYourGarageDoorRemote",
-        "name" : "Garage",
+        "accessory" : "ControlsGarageDoorOpener",
+        "name" : "ControlsGarageDoorOpener",
         "doorSwitchPin" : 7,
         "simulateTimeOpening" : 22,
         "doorSwitchPressTimeInMs" : 2000,
