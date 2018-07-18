@@ -1,4 +1,4 @@
-# Simple Garage Door Opener
+# Homebridge Controls Garage Door Opener
 
 [![npm version](https://badge.fury.io/js/homebridge-controls-garage-door-opener.svg)](https://badge.fury.io/js/homebridge-controls-garage-door-opener)
 
