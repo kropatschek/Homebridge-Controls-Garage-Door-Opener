@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/homebridge-controls-garage-door-opener.svg)](https://badge.fury.io/js/homebridge-controls-garage-door-opener)
 
-A Homebridge Plugin for controlling your garage door via your iOS device.
+A Homebridge Plugin forked from [Daniel Reiser](https://github.com/danielreiser/Homebridge-Simple-Garage-Door-Opener) for controlling your garage door via your iOS device.
 
 Being frustrated about the lack of homekit-enabled garage door openers which don't need any modifications on the garage door itself, I created my own solution.
 Oh and it's pretty cheap too.
