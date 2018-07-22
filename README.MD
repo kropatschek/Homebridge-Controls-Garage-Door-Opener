@@ -40,7 +40,7 @@ You don't need that much to get started. Just tell Simple Garage Door Opener whi
         "doorSwitchPin" : 7,
         "simulateTimeOpening" : 22,
         "doorSwitchPressTimeInMs" : 2000,
-        "doorSwitchValue" : 0,
+        "doorSwitchActiveLow" : 0,
         "simulateTimeOpen" : 42,
         "simulateTimeClosing" : 22
     }]
