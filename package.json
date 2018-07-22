@@ -1,6 +1,6 @@
 {
   "name": "homebridge-controls-garage-door-opener",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Garage Door Opener plugin for Homebridge with auto-states",
   "author": {
     "name": "Sebastian J Kropatschek"
