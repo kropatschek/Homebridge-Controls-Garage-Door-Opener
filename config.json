@@ -13,7 +13,7 @@
         "doorSwitchPin" : 7,
         "simulateTimeOpening" : 22,
         "doorSwitchPressTimeInMs" : 2000,
-        "doorSwitchValue" : 0,
+        "doorSwitchActiveLow" : 1,
         "simulateTimeOpen" : 42,
         "simulateTimeClosing" : 22
     }]
