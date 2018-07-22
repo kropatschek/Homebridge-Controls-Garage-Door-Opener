@@ -18,7 +18,7 @@ class ControlsGarageDoorOpener {
     this.name = config['name'];
     this.doorSwitchPin = config['doorSwitchPin'] || 12;
     this.doorSwitchPressTimeInMs = config['doorSwitchPressTimeInMs'] || 1000;
-    this.doorSwitchValue = config['doorSwitchValue'] || 0;
+		this.doorSwitchActiveLow = config['doorSwitchActiveLow'] || 1;
     this.simulateTimeOpening = config['simulateTimeOpening'] || 15;
     this.simulateTimeOpen = config['simulateTimeOpen'] || 30;
     this.simulateTimeClosing = config['simulateTimeClosing'] || 15;
@@ -41,11 +41,11 @@ class ControlsGarageDoorOpener {
   }
 
   setupGarageDoorOpenerService (service) {
-    if (this.doorSwitchValue == 1) {
-      rpio.open(this.doorSwitchPin, rpio.OUTPUT, rpio.LOW);
-    } else {
-      rpio.open(this.doorSwitchPin, rpio.OUTPUT, rpio.HIGH);
-    }
+    if (this.doorSwitchActiveLow) {
+			rpio.open(this.doorSwitchPin, rpio.OUTPUT, rpio.HIGH);
+		} else {
+			rpio.open(this.doorSwitchPin, rpio.OUTPUT, rpio.LOW);
+		}
     this.service.setCharacteristic(Characteristic.TargetDoorState, Characteristic.TargetDoorState.CLOSED);
     this.service.setCharacteristic(Characteristic.CurrentDoorState, Characteristic.CurrentDoorState.CLOSED);
 
@@ -78,15 +78,15 @@ class ControlsGarageDoorOpener {
   }
 
   openGarageDoor (callback) {
-    if (this.doorSwitchValue == 1) {
-      rpio.write(this.doorSwitchPin, rpio.HIGH);
-      rpio.msleep(this.doorSwitchPressTimeInMs);
-      rpio.write(this.doorSwitchPin, rpio.LOW);
-    } else {
-      rpio.write(this.doorSwitchPin, rpio.LOW);
-      rpio.msleep(this.doorSwitchPressTimeInMs);
-      rpio.write(this.doorSwitchPin, rpio.HIGH); 
-    }
+		if (this.doorSwitchActiveLow) {
+			rpio.write(this.doorSwitchPin, rpio.LOW);
+			rpio.msleep(this.doorSwitchPressTimeInMs);
+			rpio.write(this.doorSwitchPin, rpio.HIGH); 
+		} else {
+			rpio.write(this.doorSwitchPin, rpio.HIGH);
+			rpio.msleep(this.doorSwitchPressTimeInMs);
+			rpio.write(this.doorSwitchPin, rpio.LOW);
+		}
     
     this.log('Opening the garage door for...');
     this.simulateGarageDoorOpening();
